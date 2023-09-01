@@ -3,7 +3,7 @@
     <div class="mainHeader">
         <div class="row align-items-center justify-content-between">
             <div class="col-md-4">
-                <img src="../../images/logo-full.webuyanycar.png" alt="">
+                <img src="{{asset('images/logo-full.webuyanycar.png')}}" alt="">
             </div>
             <div class="col-md-4">
                 <div class="row">
