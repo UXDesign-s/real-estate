@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
-
+body {
+    font-family: 'Quicksand', sans-serif !important;
+}
 .mainHeader {
     max-width: 1140px;
     margin: 0 auto;
@@ -200,3 +203,109 @@ button.btn-close.text-reset {
 .offcanvas-body {
     padding: 0;
 }
+
+/* MAIN CONTENT */
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.sectionInput {
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.sectionInput input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.sectionInput h2 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+}
+span.green {
+    color: #00a94e;
+}
+.sectionImage {
+    float: right;
+    margin-right: 70px;
+}
+input[type="submit"] {
+    background-color: #00a94e;
+    color: #fff;
+    border: none;
+}
+.houseandPost {
+    margin-top: 50px !important;
+    margin-bottom: 120px;
+    padding: 50px 114px !important;
+    align-items: center;    
+    background: #EDF3EE;
+    border-radius: 27px !important;
+}
+.sectionInput p i {
+    color: #00a94e;
+    font-size: 18px;
+}
+.sectionInput p {
+    font-weight: 500;
+    font-size: 17px;
+}
+.steps {
+    margin-top: 50px !important;
+    margin-bottom: 120px;
+    padding: 50px 114px !important;
+    align-items: center;  
+    background: #EDF3EE;
+    border-radius: 27px !important;
+}
+.steps h2.text-center {
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 49px;
+}
+.steps h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 14px;
+}
+.steps p {
+    font-size: 16px;
+    line-height: 18px;
+}
+.stepstart img {
+    width: 116px;
+}
+.col-md-6.videoContent {
+    padding: 75px 60px !important;
+    background: #f5e9ed;
+}
+.col-md-6.videomain {
+    padding: 75px 60px !important;
+    background: #ecd5de;
+}
+.pinkborder {
+    border: 3px solid #D8A7B9;
+}
+.row.videosection {
+    background: #f5e9ed;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+.videoContent h2 {
+    font-weight: 700;
+    font-size: 36px;
+}
+.videoContent p {
+    font-size: 15px;
+    line-height: 26px;
+    margin-top: 21px;
+}
+
+/* SLIDER REVIEWS */
