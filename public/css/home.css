@@ -309,3 +309,44 @@ input[type="submit"] {
 }
 
 /* SLIDER REVIEWS */
+.col-md-3.reviews {
+    width: 30% !important;
+    background: #f8f9fa !important;
+    padding: 40px;
+    border-radius: 14px;
+}
+.reveiw.container {
+    padding-bottom: 120px;
+}
+.reviews h3 {
+    font-size: 20px;
+    font-weight: 800;
+}
+.star-rating i {
+    font-size: 11px;
+    color: #fff;
+    background: #00a94e;
+    padding: 4px 3px;
+}
+i.fa.fa-check {
+    color: #fff;
+    background: #000;
+    line-height: 0;
+    margin: 0;
+    padding: 12px 7px;
+    border-radius: 50px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+.rating {
+    margin-bottom: 12px;
+}
+.star-rating {
+    gap: 6px;
+}
+p.blur {
+    opacity: 60%;
+}
+.reveiw h2.text-center {
+    margin-bottom: 30px;
+}

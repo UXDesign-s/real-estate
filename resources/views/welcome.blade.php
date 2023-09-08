@@ -28,7 +28,8 @@
         <div class="row steps">
             <h2 class="text-center">Sell Your car in <span class="green">3 simple Steps</span></h2>
             <div class="col-md-4">
-                <div class="stepstart text-center">
+                <div class="stepstart text-center"> 
+                    
                     <img src="../../images/icon-1.png" alt="">
                     <h3>1. Get your free valuation</h3>
                     <p>Start by entering your registration, mileage, email and postcode.</p>
@@ -56,6 +57,75 @@
     {{-- 3 St5eps Ends --}}
 
     {{-- REVIEWS STARTS --}}
+    <div class="reveiw container">        
+        <div class="row justify-content-between">
+            <h2 class="text-center">We'rated <span class="green">'Excellent'</span> on Trustpilot</h2>
+            <div class="col-md-3 reviews">
+                <div class="row rating align-content-center">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <div class="star-rating d-flex justify-content-between">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <p class="m-0">Invited</p>
+                    </div>
+                </div>
+                <h3>Dacia</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis voluptates eveniet consequatur, nihil a molestias, illum sed provident velit</p>
+                <p class="blur">username: 20 minutes ago</p>
+            </div>
+
+            <div class="col-md-3 reviews">
+                <div class="row rating align-content-center">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <div class="star-rating d-flex justify-content-between">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <p class="m-0">Invited</p>
+                    </div>
+                </div>
+                <h3>Dacia</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis voluptates eveniet consequatur, nihil a molestias, illum sed provident velit</p>
+                <p class="blur">username: 20 minutes ago</p>
+            </div>
+
+            <div class="col-md-3 reviews">
+                <div class="row rating align-content-center">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <div class="star-rating d-flex justify-content-between">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                        <p class="m-0">Invited</p>
+                    </div>
+                </div>
+                <h3>Dacia</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis voluptates eveniet consequatur, nihil a molestias, illum sed provident velit</p>
+                <p class="blur">username: 20 minutes ago</p>
+            </div>
+        </div>
+    </div>
+
+
 
     {{-- REVIEWS ENDS  --}}
 
