@@ -16,7 +16,7 @@
             </div>
             <div class="col-md-6">
                 <div class="sectionImage">
-                    <img src="../../images/mufasa.png" alt="">
+                    <img src="{{asset('images/mufasa.png')}}" alt="">
                 </div>
             </div>
         </div>
@@ -30,14 +30,14 @@
             <div class="col-md-4">
                 <div class="stepstart text-center"> 
                     
-                    <img src="../../images/icon-1.png" alt="">
+                    <img src="{{asset('images/icon-1.png')}}" alt="">
                     <h3>1. Get your free valuation</h3>
                     <p>Start by entering your registration, mileage, email and postcode.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="stepstart text-center">
-                    <img src="../../images/icon-2.png" alt="">
+                    <img src="{{asset('images/icon-2.png')}}" alt="">
                     <h3>2. Book an appointment</h3>
                     <p>Choose a date, time and branch that is convenient for you. We’ve got over 500 branches around the UK.
                     </p>
@@ -45,7 +45,7 @@
             </div>
             <div class="col-md-4">
                 <div class="stepstart text-center">
-                    <img src="../../images/icon-3.png" alt="">
+                    <img src="{{asset('images/icon-3.png')}}" alt="">
                     <h3>3. Sell your car</h3>
                     <p>Drive to your chosen branch, we’ll confirm your valuation. If you’re happy, we’ll help with paperwork
                         and set up your payment.</p>
