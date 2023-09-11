@@ -9,7 +9,7 @@
       
         <div class="col-md-3">
             <h3>Your Details</h3>
-            <p>Step 1 of 2</p>
+            <p>Step 2 of 2</p>
         </div>  <div class="col-md-6">
             <form action="/your-evaluation" method="get">
             <div class="inputGroup">

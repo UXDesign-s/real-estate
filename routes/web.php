@@ -16,3 +16,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/check-registration', function () {
+    return view('propertyEvaul');
+})->name('check-registration');
+
+
+Route::get('/check-property', function () {
+    return view('propertyEvaul2');
+})->name('check-property');
+
+
+Route::get('/your-evaluation', function () {
+    return view('yourEvalua');
+})->name('your-evaluation');
+
+
+Route::get('/appointment', function () {
+    return view('appointment');
+})->name('appointment');
