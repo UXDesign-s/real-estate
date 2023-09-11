@@ -10,7 +10,9 @@
                     <h2><span class="green">30 second car</span> valuation</h2>
                     <input type="text" placeholder="Enter Your House number">
                     <input type="text" placeholder="Postcode">
+                   <a href="/check-registration">
                     <input type="submit" value="Submit">
+                </a> 
                     <p>Excellent 207,415 reviews on <i class="fa fa-star" aria-hidden="true"></i> Trustpilot </p>
                 </div>
             </div>
