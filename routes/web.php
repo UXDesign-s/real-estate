@@ -36,3 +36,13 @@ Route::get('/your-evaluation', function () {
 Route::get('/appointment', function () {
     return view('appointment');
 })->name('appointment');
+
+
+Route::get('/confirm-appointment', function () {
+    return view('confirm');
+})->name('confirm-appointment');
+
+
+Route::get('/booked', function () {
+    return view('booked');
+})->name('booked');

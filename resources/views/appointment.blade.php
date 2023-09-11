@@ -23,6 +23,7 @@
                 </ul>
             </div>
             <div class="col-md-7">
+                <form action="{{route('confirm-appointment')}}" method="get">
                 <p>Select a time</p>
                 <div class="row align-items-center justify-content-start calenderChart">
                     <div class="col-md-2 text-center">
@@ -67,6 +68,7 @@
                     </div>
                 </div>
                 <input type="submit" value="Submit" class="continue">
+                </form>
             </div>
             <div class="col-md-2">
                 <p><strong>Address:</strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque minima eos hic
