@@ -46,3 +46,8 @@ Route::get('/confirm-appointment', function () {
 Route::get('/booked', function () {
     return view('booked');
 })->name('booked');
+
+
+Route::get('/complete-evaluation', function () {
+    return view('complete-evaluation');
+})->name('complete-evaluation');

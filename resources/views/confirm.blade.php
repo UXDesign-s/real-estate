@@ -9,11 +9,11 @@
       
         <div class="col-md-3">
             <h3>Confirm Your Appointment</h3>
-            <h6>Appointmnet Summary</h6>
+            <h6><span class="green">Appointmnet Summary</span></h6>
             <ul>
-                <li>Branch</li>
-                <li>Date</li>
-                <li>Time</li>
+                <li><strong>Branch:</strong> Lorem Ipsum</li>
+                <li><strong>Date: </strong>1/12/23</li>
+                <li><strong>Time:</strong> 10:15</li>
             </ul>
         </div>  <div class="col-md-6">
             <form action="{{route('booked')}}" method="get">
