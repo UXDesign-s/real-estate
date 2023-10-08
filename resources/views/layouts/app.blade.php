@@ -27,8 +27,8 @@
         @include('layouts.header')
         @yield('content')
         @include('layouts.footer')
-        {{-- @livewireScripts() --}}
-        <script src="https://snehal.info/project/eState/public/livewire/livewire.js?id=5d3e67e0"></script>
+        
+        <script src="https://snehal.info/project/eState/public/livewire/livewire.js?id=5d3e67e0" data-csrf="PZx5AbnUi6t1E7l6UAuBs04U8oLwFhuC4z33uEeG" data-uri="/livewire/update" data-navigate-once="true"></script>
 </body>
 
 </html>
