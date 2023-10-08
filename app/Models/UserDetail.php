@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class UserDetail extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+
+
+        "houseNo", "postCode", "email", "phone_no", "steps"
+
+    ];
+
+
+
+    public function property_detail(){
+        return $this->hasOne(PropertyDetail::class);
+    }
+
 }

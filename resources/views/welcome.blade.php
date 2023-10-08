@@ -5,17 +5,7 @@
     {{-- First Section Starts --}}
     <div class="container">
         <div class="row houseandPost ">
-            <div class="col-md-6">
-                <div class="sectionInput d-flex">
-                    <h2><span class="green">30 second car</span> valuation</h2>
-                    <input type="text" placeholder="Enter Your House number">
-                    <input type="text" placeholder="Postcode">
-                    <a href="{{ route('check-registration') }}">
-                        <input type="submit" value="Submit">
-                    </a>
-                    <p>Excellent 207,415 reviews on <i class="fa fa-star" aria-hidden="true"></i> Trustpilot </p>
-                </div>
-            </div>
+                @livewire('home-form')
             <div class="col-md-6">
                 <div class="sectionImage">
                     <img src="{{ asset('images/mufasa.png') }}" alt="">
