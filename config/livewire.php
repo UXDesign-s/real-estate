@@ -12,6 +12,7 @@ return [
     | finds components. It's also referenced by the file creation commands.
     |
     */
+    'asset_url' => 'project/eState/public/livewire/livewire.js?id=5d3e67e0',
 
     'class_namespace' => 'App\\Livewire',
 
