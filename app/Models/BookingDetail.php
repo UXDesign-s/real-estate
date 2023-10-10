@@ -10,4 +10,9 @@ class BookingDetail extends Model
     use HasFactory;
 
     protected $fillable = ["user_details_id", "name", "email", "moblie_no", "meeting_date", "meeting_time", "meeting_branch" ] ;
+
+    public function user_detail(){
+
+        return $this->belongsTo(UserDetail::class);
+    }
 }

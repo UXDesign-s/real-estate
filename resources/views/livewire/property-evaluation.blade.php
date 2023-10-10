@@ -174,7 +174,8 @@
                     <h3>
                         Your Valuation
                     </h3>
-                    <h2> ${{  isset($data['average']) ? number_format($data['average'], 2)  : number_format($data['average_price'], 2)  }}</h2>
+                    <h2> ${{ isset($data['average']) ? number_format($data['average'], 2) : number_format($data['average_price'], 2) }}
+                    </h2>
                     <h4>
                         We can settle finance
                     </h4>
@@ -193,49 +194,34 @@
                     <form wire:submit.prevent="pageThree">
                         <p>Select branch and date</p>
                         <div class="inputgroup d-flex">
-                            <input type="text" value="{{$meeting_branch}}" wire:model="meeting_branch" placeholder="Reading Whitly">
+                            <input type="text" value="{{ $meeting_branch }}" wire:model="meeting_branch"
+                                placeholder="Reading Whitly">
                             <button>2.9 miles away</button>
                         </div>
                         <div class="row align-items-center justify-content-start calenderChart">
-                            <div class="col-md-2 text-center">
-                                <a href="#">Wed <br>23Aug
-                                <input type="radio" name="meeting_date"  value="23/08/2023" wire:model="meeting_date">
-                                </a>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">Wed <br>23Aug</a>
-                                <input type="radio" name="meeting_date"  value="23/08/2023"wire:model="meeting_date">
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">Wed <br>23Aug</a>
-                                <input type="radio" name="meeting_date"  value="24/08/2023"wire:model="meeting_date">
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">Wed <br>23Aug</a>
-                                <input type="radio" name="meeting_date"  value="25/08/2023"wire:model="meeting_date">
-                            </div>
+
+                            @foreach ($booking_date as $result)
+                                <div class="col-md-2 text-center">
+                                    <a href="#">{{ $result }}
+                                        <input type="radio" name="meeting_date"
+                                            {{ $result == $meeting_date ? 'checked' : '' }}
+                                            value="{{ $result }}" wire:model="meeting_date">
+                                    </a>
+                                </div>
+                            @endforeach
+
+
                         </div>
                         <div class="row align-items-center justify-content-start calenderChart">
-                            <div class="col-md-2 text-center">
-                                <a href="#">Wed <br>23Aug</a>
-                                <input type="radio" name="meeting_date"  value="26/08/2023"wire:model="meeting_date">
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">Wed <br>23Aug</a>
-                                <input type="radio" name="meeting_date"  value="27/08/2023"wire:model="meeting_date">
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">Wed <br>23Aug</a>
-                                <input type="radio" name="meeting_date"  value="28/08/2023"wire:model="meeting_date">
-                            </div>
+
                             <input type="submit" value="Submit" class="continue">
                         </div>
                         @if ($steps >= 2)
-                        <i class="fas fa-arrow-left"wire:click="back(2,3)"> Back</i>
-                    @endif
-                    @if ($steps > 3)
-                        <i class="fas fa-arrow-right"wire:click="forward(4,3)"> Forward</i>
-                    @endif
+                            <i class="fas fa-arrow-left"wire:click="back(2,3)"> Back</i>
+                        @endif
+                        @if ($steps > 3)
+                            <i class="fas fa-arrow-right"wire:click="forward(4,3)"> Forward</i>
+                        @endif
                     </form>
                 </div>
                 <div class="col-md-2">
@@ -261,7 +247,8 @@
                     <h3>
                         Your Valuation
                     </h3>
-                    <h2>${{  isset($data['average']) ? number_format($data['average'], 2)  : number_format($data['average_price'], 2)  }}</h2>
+                    <h2>${{ isset($data['average']) ? number_format($data['average'], 2) : number_format($data['average_price'], 2) }}
+                    </h2>
                     <h4>
                         We can settle finance
                     </h4>
@@ -277,49 +264,25 @@
                     </ul>
                 </div>
                 <div class="col-md-7">
-                    <form wire:submit.prevent="pageFour>
+                    <form wire:submit.prevent="pageFour">
                         <p>Select a time</p>
                         <div class="row align-items-center justify-content-start calenderChart">
-                            <div class="col-md-2 text-center">
-                                <a href="#">10:00</a>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">10:20</a>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">10:40</a>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">11:00</a>
-                            </div>
+
+                            @foreach ($booking_time as $key => $result)
+                                <div class="col-md-2 text-center" >
+                                  <label for="meeting_time_{{$key}}">{{ $result}}</label> 
+                                        <input type="radio" id="meeting_time_{{$key}}" name="meeting_time"
+                                            {{ $result == $meeting_time ? 'checked' : '' }}
+                                            value="{{ $result }}" wire:model="meeting_time">
+                                        
+                                </div>
+                            @endforeach
+
+
                         </div>
+
                         <div class="row align-items-center justify-content-start calenderChart">
-                            <div class="col-md-2 text-center">
-                                <a href="#">11:20</a>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">11:40</a>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">12:00</a>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">12:20</a>
-                            </div>
-                        </div>
-                        <div class="row align-items-center justify-content-start calenderChart">
-                            <div class="col-md-2 text-center">
-                                <a href="#">12:40</a>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">01:00</a>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">01:20</a>
-                            </div>
-                            <div class="col-md-2 text-center">
-                                <a href="#">01:40</a>
-                            </div>
+
                             <input type="submit" value="Submit" class="continue">
                         </div>
 
@@ -357,9 +320,9 @@
                     <h3>Confirm Your Appointment</h3>
                     <h6><span class="green">Appointmnet Summary</span></h6>
                     <ul>
-                        <li><strong>Branch:</strong> Lorem Ipsum</li>
-                        <li><strong>Date: </strong>1/12/23</li>
-                        <li><strong>Time:</strong> 10:15</li>
+                        <li><strong>Branch:</strong> {{$meeting_branch}}</li>
+                        <li><strong>Date: </strong>{{$meeting_date}}</li>
+                        <li><strong>Time:</strong> {{$meeting_time}}</li>
                     </ul>
                 </div>
                 <div class="col-md-6">

@@ -21,5 +21,9 @@ class UserDetail extends Model
     public function property_detail(){
         return $this->hasOne(PropertyDetail::class);
     }
+   
+    public function booking_detail(){
+        return $this->hasOne(BookingDetail::class);
+    }
 
 }

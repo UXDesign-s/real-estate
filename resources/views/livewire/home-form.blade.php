@@ -4,8 +4,9 @@
 
             <h2><span class="green">30 second car</span> valuation</h2>
             <input type="text" wire:model="houseNo" placeholder="Enter Your House number">
+            <br>
             @error('houseNo')
-                <span class="error">{{ $message }}</span>
+                <span style="color: red" class="error">{{ $message }}</span>
             @enderror
             <input type="text" wire:model="postCode" placeholder="Postcode">
             @error('postCode')
