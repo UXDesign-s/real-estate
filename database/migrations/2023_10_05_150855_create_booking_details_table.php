@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('meeting_branch')->nullable();
             $table->string('name')->nullable();
             $table->string('email')->nullable();
-            $table->string('moblie_no')->nullable();
+            $table->string('mobile_no')->nullable();
             $table->string('meeting_date');
             $table->string('meeting_time')->nullable();
             $table->timestamps();

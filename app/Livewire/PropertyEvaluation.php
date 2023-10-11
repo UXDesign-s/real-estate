@@ -18,6 +18,7 @@ class PropertyEvaluation extends Component
     public $page_3_show   = false;
     public $page_4_show = false;
     public $page_5_show    = false;
+    public $page_6_show    = false;
 
 
     public $houseNo;
@@ -34,6 +35,11 @@ class PropertyEvaluation extends Component
     public $booking_date;
     public $booking_time;
     public $meeting_time;
+    public $booking_email;
+    public $name;
+    public $mobile_no;
+    public $getUserDetails;
+    public $addressData;
 
 
     protected $rules = [
@@ -45,11 +51,11 @@ class PropertyEvaluation extends Component
     {
 
         $email = session("email");
-        $getUserDetails = UserDetail::where('email', $email)->first();
+        $this->getUserDetails = UserDetail::where('email', $email)->first();
 
         if (!session('houseNo')) {
 
-            // dd("adsd", $getUserDetails, $email);
+            // dd("adsd", $this->getUserDetails, $email);
 
             return redirect(route('home'));
         }
@@ -81,17 +87,20 @@ class PropertyEvaluation extends Component
         }
         $this->booking_time = $bookingTime;
 
-        $this->email = $getUserDetails->email ?? "";
-        // $this->houseNo = $getUserDetails->houseNo;
-        // $this->postCode = $getUserDetails->postCode;
-        $this->phone_no = $getUserDetails->phone_no ?? "";
-        $this->steps = $getUserDetails->steps ?? "";
-        $this->property_type = $getUserDetails->property_detail->property_type ?? "";
-        $this->bedroom = $getUserDetails->property_detail->bedrooms ?? "";
-        $this->rent_length = $getUserDetails->property_detail->rent_length ?? "";
+        $this->email = $this->getUserDetails->email ?? "";
+        // $this->houseNo = $this->getUserDetails->houseNo;
+        // $this->postCode = $this->getUserDetails->postCode;
+        $this->phone_no = $this->getUserDetails->phone_no ?? "";
+        $this->steps = $this->getUserDetails->steps ?? "";
+        $this->name = $this->getUserDetails->booking_detail->name   ?? "";
+        $this->booking_email = $this->getUserDetails->booking_detail->booking_email   ?? "";
+        $this->mobile_no = $this->getUserDetails->booking_detail->mobile_no   ?? "";
+        $this->property_type = $this->getUserDetails->property_detail->property_type ?? "";
+        $this->bedroom = $this->getUserDetails->property_detail->bedrooms ?? "";
+        $this->rent_length = $this->getUserDetails->property_detail->rent_length ?? "";
 
 
-        // dd( $getUserDetails->property_detail->rent_length);
+        // dd( $this->getUserDetails->property_detail->rent_length);
     }
 
 
@@ -201,10 +210,10 @@ class PropertyEvaluation extends Component
 
 
         // dd($this->meeting_date);
-        $getUserDetails = UserDetail::where('email', $email)->first();
+        $this->getUserDetails = UserDetail::where('email', $email)->first();
 
         BookingDetail::updateOrCreate(
-            ['user_detail_id' => $getUserDetails->id],
+            ['user_detail_id' => $this->getUserDetails->id],
 
             [
                 'meeting_branch' => $this->meeting_branch,
@@ -229,14 +238,13 @@ class PropertyEvaluation extends Component
 
 
         // dd($this->meeting_date);
-        $getUserDetails = UserDetail::where('email', $email)->first();
+        $this->getUserDetails = UserDetail::where('email', $email)->first();
 
         BookingDetail::updateOrCreate(
-            ['user_detail_id' => $getUserDetails->id],
+            ['user_detail_id' => $this->getUserDetails->id],
 
             [
                 'meeting_time' => $this->meeting_time,
-                'meeting_date' => $this->meeting_date
             ]
         );
 
@@ -244,6 +252,39 @@ class PropertyEvaluation extends Component
         $this->page_5_show = true;
     }
 
+
+    public function pageFive()
+    {
+
+        $email = session("email");
+        UserDetail::where("email", $email)->update([
+            "steps" => 5,
+        ]);
+
+
+        $response = Http::get('https://api.postcodes.io/postcodes/'.session("postCode"))->json();
+        // dd($response);
+        // 
+        if($response){
+        $this->addressData = $response;
+        }
+        // dd($this->addressData);
+        // dd($this->meeting_date);
+        $this->getUserDetails = UserDetail::where('email', $email)->first();
+
+        BookingDetail::updateOrCreate(
+            ['user_detail_id' => $this->getUserDetails->id],
+
+            [
+                'name' => $this->name,
+                'email' => $this->booking_email,
+                'mobile_no' => $this->mobile_no
+            ]
+        );
+
+        $this->page_5_show = false;
+        $this->page_6_show = true;
+    }
 
 
 
@@ -254,7 +295,7 @@ class PropertyEvaluation extends Component
         $varShow = "page_" . $formShow . "_show";
         $varHide = "page_" . $formHide . "_show";
 
-        // dd("page_".$formId."_show");
+        // dd("page_".$varHide."_show");
 
         $this->$varShow =  true;
         $this->$varHide =  false;
@@ -266,7 +307,7 @@ class PropertyEvaluation extends Component
 
         $varShow = "page_" . $formShow . "_show";
         $varHide = "page_" . $formHide . "_show";
-
+        // dd("page_".$varHide."_show");
         // dd("page_".$formId."_show");
 
         $this->$varShow =  true;
@@ -277,22 +318,25 @@ class PropertyEvaluation extends Component
     {
 
         $email = session("email");
-        $getUserDetails = UserDetail::where('email', $email)->first();
+        $this->getUserDetails = UserDetail::where('email', $email)->first();
 
-        // dd($getUserDetails->booking_detail);
-        $this->email = $getUserDetails->email ?? "";
-        // $this->houseNo = $getUserDetails->houseNo;
-        // $this->postCode = $getUserDetails->postCode;
-        $this->phone_no = $getUserDetails->phone_no ?? "";
-        $this->steps = $getUserDetails->steps ?? "";
-        $this->meeting_branch = $getUserDetails->booking_detail->meeting_branch ?? "";
-        $this->meeting_date = $getUserDetails->booking_detail->meeting_date   ?? "";
-        $this->meeting_time = $getUserDetails->booking_detail->meeting_time   ?? "";
-        $this->property_type =  $getUserDetails->property_detail->property_type ?? "";
-        $this->bedroom =  $getUserDetails->property_detail->bedrooms ?? "";
-        $this->rent_length =  $getUserDetails->property_detail->rent_length ?? "";
-        $this->data =  $getUserDetails->property_detail ?? '';
-        // dd($getUserDetails->property_detail->rent_length);
+        // dd($this->getUserDetails->booking_detail);
+        $this->email = $this->getUserDetails->email ?? "";
+        // $this->houseNo = $this->getUserDetails->houseNo;
+        // $this->postCode = $this->getUserDetails->postCode;
+        $this->phone_no = $this->getUserDetails->phone_no ?? "";
+        $this->steps = $this->getUserDetails->steps ?? "";
+        $this->meeting_branch = $this->getUserDetails->booking_detail->meeting_branch ?? "";
+        $this->meeting_date = $this->getUserDetails->booking_detail->meeting_date   ?? "";
+        $this->meeting_time = $this->getUserDetails->booking_detail->meeting_time   ?? "";
+        $this->name = $this->getUserDetails->booking_detail->name   ?? "";
+        $this->booking_email = $this->getUserDetails->booking_detail->email   ?? "";
+        $this->mobile_no = $this->getUserDetails->booking_detail->mobile_no   ?? "";
+        $this->property_type =  $this->getUserDetails->property_detail->property_type ?? "";
+        $this->bedroom =  $this->getUserDetails->property_detail->bedrooms ?? "";
+        $this->rent_length =  $this->getUserDetails->property_detail->rent_length ?? "";
+        $this->data =  $this->getUserDetails->property_detail ?? '';
+        // dd($this->getUserDetails->property_detail->rent_length);
 
         return view('livewire.property-evaluation');
     }

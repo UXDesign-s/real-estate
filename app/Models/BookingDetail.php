@@ -9,7 +9,7 @@ class BookingDetail extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["user_detail_id", "name", "email", "moblie_no", "meeting_date", "meeting_time", "meeting_branch" ] ;
+    protected $fillable = ["user_detail_id", "name", "email", "mobile_no", "meeting_date", "meeting_time", "meeting_branch" ] ;
 
     public function user_detail(){
 
