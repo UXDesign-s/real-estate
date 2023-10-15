@@ -41,6 +41,7 @@ class PropertyEvaluation extends Component
     public $mobile_no;
     public $getUserDetails;
     public $addressData;
+    public $ref_no;
 
 
     protected $rules = [
@@ -276,7 +277,7 @@ class PropertyEvaluation extends Component
         // $ref_id = IdGenerator::generate(['table' => 'booking_details', 'length' => 9, 'prefix' =>$prefix]);
         // dd($ref_id);
 
-        BookingDetail::create(
+       $bookingDetails =  BookingDetail::create(
             [
             'meeting_branch' => $this->meeting_branch,
             'user_detail_id' => $this->getUserDetails->id,
@@ -290,7 +291,7 @@ class PropertyEvaluation extends Component
         );
 
 
-
+        $this->ref_no = $bookingDetails->ref_no;   
         $this->page_5_show = false;
         $this->page_6_show = true;
     }

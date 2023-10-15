@@ -39,7 +39,7 @@
                     </tr>
                     <tr>
                         <th scope="row">Ref:</th>
-                        <td>WBAC 506908384</td>
+                        <td>{{$getUserDetail->ref_no}}</td>
                     </tr>
                     <tr>
                         <th scope="row">Fee:</th>
