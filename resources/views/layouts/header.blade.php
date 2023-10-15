@@ -61,7 +61,7 @@
                                     <li class="list-group-item"><a href="#">Car valuation</a></li>
                                     <li class="list-group-item"><a href="#">FAQs</a></li>
                                     <li class="list-group-item"><a href="#">Branch locator</a></li>
-                                    <li class="list-group-item"><a href="#">Manage appointment</a></li>
+                                    <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#exampleModal"><a href="#">Manage appointment</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -74,4 +74,35 @@
     </div>
 </div>
 
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Manage Appointments</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="{{route('get-appointment-email')}}" method="post">
+            @csrf
+        <div class="modal-body">
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" name="email" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+              {{-- <div class="row mb-3">
+            </div> --}}
+        </div>
+        <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Get Data</button>
+                {{-- <button type="button"  data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button> --}}
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
 {{-- Header Ends --}}

@@ -23,7 +23,7 @@ class UserDetail extends Model
     }
    
     public function booking_detail(){
-        return $this->hasOne(BookingDetail::class);
+        return $this->hasMany(BookingDetail::class);
     }
 
 }

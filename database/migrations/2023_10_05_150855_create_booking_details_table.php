@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_detail_id')->constrained('user_details')->onDelete('cascade');
             $table->string('meeting_branch')->nullable();
+            $table->string('ref_no')->unique();
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('mobile_no')->nullable();

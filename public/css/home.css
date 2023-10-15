@@ -140,7 +140,8 @@ input.vrm.ng-untouched.ng-pristine.ng-invalid {
 }
 
 .mainDiv {
-    box-shadow: 0 3px #ededed;
+    /* box-shadow: 0 3px #ededed; */
+    box-shadow: 0 3px #bf40bf;
 }
 
 .footerInner {

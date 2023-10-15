@@ -8,6 +8,7 @@ use App\Models\UserDetail;
 use Carbon\Carbon;
 use Livewire\Component;
 use Illuminate\Support\Facades\Http;
+use Haruncpi\LaravelIdGenerator\IdGenerator;
 
 class PropertyEvaluation extends Component
 {
@@ -68,7 +69,7 @@ class PropertyEvaluation extends Component
         }
         $this->booking_date = $bookingDate;
 
-
+        // dd($this->getUserDetails->booking_detail);
         $bookingTime = [];
 
         // Get the current hour and minute
@@ -92,9 +93,9 @@ class PropertyEvaluation extends Component
         // $this->postCode = $this->getUserDetails->postCode;
         $this->phone_no = $this->getUserDetails->phone_no ?? "";
         $this->steps = $this->getUserDetails->steps ?? "";
-        $this->name = $this->getUserDetails->booking_detail->name   ?? "";
-        $this->booking_email = $this->getUserDetails->booking_detail->booking_email   ?? "";
-        $this->mobile_no = $this->getUserDetails->booking_detail->mobile_no   ?? "";
+        // $this->name = $this->getUserDetails->booking_detail->name   ?? "";
+        // $this->booking_email = $this->getUserDetails->booking_detail->booking_email   ?? "";
+        // $this->mobile_no = $this->getUserDetails->booking_detail->mobile_no   ?? "";
         $this->property_type = $this->getUserDetails->property_detail->property_type ?? "";
         $this->bedroom = $this->getUserDetails->property_detail->bedrooms ?? "";
         $this->rent_length = $this->getUserDetails->property_detail->rent_length ?? "";
@@ -212,14 +213,14 @@ class PropertyEvaluation extends Component
         // dd($this->meeting_date);
         $this->getUserDetails = UserDetail::where('email', $email)->first();
 
-        BookingDetail::updateOrCreate(
-            ['user_detail_id' => $this->getUserDetails->id],
+        // BookingDetail::updateOrCreate(
+        //     ['user_detail_id' => $this->getUserDetails->id],
 
-            [
-                'meeting_branch' => $this->meeting_branch,
-                'meeting_date' => $this->meeting_date
-            ]
-        );
+        //     [
+        //         'meeting_branch' => $this->meeting_branch,
+        //         'meeting_date' => $this->meeting_date
+        //     ]
+        // );
 
 
 
@@ -240,13 +241,13 @@ class PropertyEvaluation extends Component
         // dd($this->meeting_date);
         $this->getUserDetails = UserDetail::where('email', $email)->first();
 
-        BookingDetail::updateOrCreate(
-            ['user_detail_id' => $this->getUserDetails->id],
+        // BookingDetail::updateOrCreate(
+        //     ['user_detail_id' => $this->getUserDetails->id],
 
-            [
-                'meeting_time' => $this->meeting_time,
-            ]
-        );
+        //     [
+        //         'meeting_time' => $this->meeting_time,
+        //     ]
+        // );
 
         $this->page_4_show = false;
         $this->page_5_show = true;
@@ -271,16 +272,24 @@ class PropertyEvaluation extends Component
         // dd($this->addressData);
         // dd($this->meeting_date);
         $this->getUserDetails = UserDetail::where('email', $email)->first();
+        // $prefix = "#GL";  
+        // $ref_id = IdGenerator::generate(['table' => 'booking_details', 'length' => 9, 'prefix' =>$prefix]);
+        // dd($ref_id);
 
-        BookingDetail::updateOrCreate(
-            ['user_detail_id' => $this->getUserDetails->id],
-
+        BookingDetail::create(
             [
-                'name' => $this->name,
-                'email' => $this->booking_email,
-                'mobile_no' => $this->mobile_no
+            'meeting_branch' => $this->meeting_branch,
+            'user_detail_id' => $this->getUserDetails->id,
+            // 'ref_id' => $ref_id,
+            'name' => $this->name,
+            'email' => $this->booking_email,
+            'mobile_no' => $this->mobile_no,
+            'meeting_time' => $this->meeting_time,
+            'meeting_date' => $this->meeting_date
             ]
         );
+
+
 
         $this->page_5_show = false;
         $this->page_6_show = true;
@@ -326,12 +335,12 @@ class PropertyEvaluation extends Component
         // $this->postCode = $this->getUserDetails->postCode;
         $this->phone_no = $this->getUserDetails->phone_no ?? "";
         $this->steps = $this->getUserDetails->steps ?? "";
-        $this->meeting_branch = $this->getUserDetails->booking_detail->meeting_branch ?? "";
-        $this->meeting_date = $this->getUserDetails->booking_detail->meeting_date   ?? "";
-        $this->meeting_time = $this->getUserDetails->booking_detail->meeting_time   ?? "";
-        $this->name = $this->getUserDetails->booking_detail->name   ?? "";
-        $this->booking_email = $this->getUserDetails->booking_detail->email   ?? "";
-        $this->mobile_no = $this->getUserDetails->booking_detail->mobile_no   ?? "";
+        // $this->meeting_branch = $this->getUserDetails->booking_detail->meeting_branch ?? "";
+        // $this->meeting_date = $this->getUserDetails->booking_detail->meeting_date   ?? "";
+        // $this->meeting_time = $this->getUserDetails->booking_detail->meeting_time   ?? "";
+        // $this->name = $this->getUserDetails->booking_detail->name   ?? "";
+        // $this->booking_email = $this->getUserDetails->booking_detail->email   ?? "";
+        // $this->mobile_no = $this->getUserDetails->booking_detail->mobile_no   ?? "";
         $this->property_type =  $this->getUserDetails->property_detail->property_type ?? "";
         $this->bedroom =  $this->getUserDetails->property_detail->bedrooms ?? "";
         $this->rent_length =  $this->getUserDetails->property_detail->rent_length ?? "";

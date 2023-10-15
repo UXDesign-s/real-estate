@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppointmentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+
+Route::get('/manage-appointment', [AppointmentController::class, 'manageAppointment'])->name('manage-appointment');
+
+Route::post('/get-appointment-email', [AppointmentController::class, 'getAppointmentEmail'])->name('get-appointment-email');
+Route::get('/appointmentDetails/{id}', [AppointmentController::class, 'appointmentDetails'])->name('appointmentDetails');
+
+// Route::get('/manage-appointment', function () {
+    
+    
+    
+// })->name('manage-appointment');
 
 Route::get('/check-registration', function () {
     return view('propertyEvaul');
