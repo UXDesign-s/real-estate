@@ -180,14 +180,14 @@
                         We can settle finance
                     </h4>
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li><img src="{{asset('images/tickit.png')}}" alt="" width="20px"> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li> <img src="{{asset('images/tickit.png')}}" alt="" width="20px"> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li> <img src="{{asset('images/tickit.png')}}" alt="" width="20px"> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li> <img src="{{asset('images/tickit.png')}}" alt="" width="20px"> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li> <img src="{{asset('images/tickit.png')}}" alt="" width="20px"> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li> <img src="{{asset('images/tickit.png')}}" alt="" width="20px"> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li> <img src="{{asset('images/tickit.png')}}" alt="" width="20px"> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li> <img src="{{asset('images/tickit.png')}}" alt="" width="20px"> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
                     </ul>
                 </div>
                 <div class="col-md-7">
@@ -244,23 +244,12 @@
             <!-- FIFTH PAGE STARTS -->
             <div class="yourOrder row">
                 <div class="col-md-3">
-                    <h3>
-                        Your Valuation
-                    </h3>
-                    <h2>${{ isset($data['average']) ? number_format($data['average'], 2) : number_format($data['average_price'], 2) }}
-                    </h2>
-                    <h4>
-                        We can settle finance
-                    </h4>
+                    <h3>Confirm Your Appointment</h3>
+                    <h6><span class="green">Appointmnet Summary</span></h6>
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li> <img class="mr-3" src="{{asset('images/locate.png')}}" alt="" width="50px">  <strong> Branch:</strong> {{ $meeting_branch }}</li>
+                        <li> <img class="mr-3"  src="{{asset('images/calenders.png')}}" alt="" width="50px">  <strong>  Date: </strong>{{ $meeting_date }}</li>
+
                     </ul>
                 </div>
                 <div class="col-md-7">
@@ -320,9 +309,9 @@
                     <h3>Confirm Your Appointment</h3>
                     <h6><span class="green">Appointmnet Summary</span></h6>
                     <ul>
-                        <li><strong>Branch:</strong> {{ $meeting_branch }}</li>
-                        <li><strong>Date: </strong>{{ $meeting_date }}</li>
-                        <li><strong>Time:</strong> {{ $meeting_time }}</li>
+                        <li><img class="mr-3" src="{{asset('images/locate.png')}}" alt="" width="50px"> <strong>Branch:</strong> {{ $meeting_branch }}</li>
+                        <li><img class="mr-3" src="{{asset('images/calenders.png')}}" alt="" width="50px"> <strong>Date: </strong>{{ $meeting_date }}</li>
+                        <li><img class="mr-3" src="{{asset('images/time.png')}}" alt="" width="50px"> <strong>Time:</strong> {{ $meeting_time }}</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
@@ -432,7 +421,7 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="address">
-                    <p><strong>Address:</strong>{{$addressData['result']['primary_care_trust']}}, {{$addressData['result']['european_electoral_region']}},  {{$addressData['result']['country']}} </p>
+                    {{-- <p><strong>Address:</strong>{{$addressData['result']['primary_care_trust']}}, {{$addressData['result']['european_electoral_region']}},  {{$addressData['result']['country']}} </p> --}}
                 </div>
                 <button>Not my address</button>
             </div>
