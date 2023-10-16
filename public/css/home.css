@@ -444,10 +444,15 @@ p.blur {
 .yourOrder input[type="submit"] {
     background-color: #BF40BF;
     color: #fff;
-    width: 80%;
+    width: 82%;
     border: none;
     padding: 10px;
+    margin-right: 69px;
     border-radius: 5px;
+}
+i.fas.fa-arrow-right {
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
 .inputGroup select {
@@ -466,7 +471,9 @@ p.blur {
 
     margin-top: 18px !important;
 }
-
+.alert.alert-success {
+    margin-top: 14px;
+}
 button {
     background-color: #BF40BF;
     color: #fff;
@@ -474,6 +481,11 @@ button {
     border: none;
     padding: 10px;
     border-radius: 5px;
+}
+.yourOrder h2 {
+    color: #bf40bf;
+    font-weight: 600;
+    font-size: 34px;
 }
 
 .yourOrder p {
@@ -510,6 +522,7 @@ button {
     font-size: 12px;
     margin-bottom: -13px;
     margin-top: 26px;
+    list-style: none;
 }
 
 .col-md-2.text-center {
@@ -583,3 +596,42 @@ input.continue {
 }
 
 
+/******FAQ PAGE***/
+
+.faqMain {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px 0 !important;
+}
+.browseQue {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.browseQue .row {
+    gap: 56px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.browseQue .row .col-md-4 {
+    border: 1px solid #000;
+    max-width: 30%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.browseQue .row .col-md-4 img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+/*****CONTACT PAGE******/
+.contactUspage  {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+span.error {
+    width: 100%;
+    display: block;
+    color: red;
+}

@@ -63,3 +63,11 @@ Route::get('/booked', function () {
 Route::get('/complete-evaluation', function () {
     return view('complete-evaluation');
 })->name('complete-evaluation');
+
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');

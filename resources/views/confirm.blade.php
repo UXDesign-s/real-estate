@@ -11,9 +11,9 @@
             <h3>Confirm Your Appointment</h3>
             <h6><span class="green">Appointmnet Summary</span></h6>
             <ul>
-                <li><strong>Branch:</strong> Lorem Ipsum</li>
-                <li><strong>Date: </strong>1/12/23</li>
-                <li><strong>Time:</strong> 10:15</li>
+                <li><strong> <img src="{{ assets('images/nexts.png') }}" alt=""> Branch:</strong> Lorem Ipsum</li>
+                <li><strong> <img src="{{ assets('images/nexts.png') }}" alt=""> Date: </strong>1/12/23</li>
+                <li><strong> <img src="{{ assets('images/nexts.png') }}" alt=""> Time:</strong> 10:15</li>
             </ul>
         </div>  <div class="col-md-6">
             <form action="{{route('booked')}}" method="get">

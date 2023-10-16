@@ -11,7 +11,7 @@
 
         
         <div class="col-md-6">
-            <h2>Complete Evaluation</h2>
+            <h2>Your Appointment is Booked <img src="{{ assets('images/check-mark.png') }}" alt=""></h2>
             <table class="table evaluationMy">
                 {{-- <thead>
                     <tr>
@@ -24,7 +24,7 @@
                 <tbody>
                     <tr>
                         <th scope="row"></th>
-                        <td>RG2 0HB <br><a href="#">Get Direction</a></td>
+                        <td>RG2 0HB <a href="#">Get Direction</a></td>
                     </tr>
                     <tr>
                         <th scope="row">Email:</th>
