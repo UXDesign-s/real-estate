@@ -59,7 +59,7 @@
                             <div class="offcanvas-body">
                                 <ul class="list-group">
                                     <li class="list-group-item"><a href="#">Car valuation</a></li>
-                                    <li class="list-group-item"><a href="#">FAQs</a></li>
+                                    <li class="list-group-item"><a href="{{route('faq') }}">FAQs</a></li>
                                     <li class="list-group-item"><a href="#">Branch locator</a></li>
                                     <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#exampleModal"><a href="#">Manage appointment</a></li>
                                 </ul>

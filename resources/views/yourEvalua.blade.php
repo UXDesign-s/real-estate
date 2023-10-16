@@ -15,14 +15,14 @@
                 We can settle finance
             </h4>
             <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li> <img src="{{ assets('images/nexts.png') }}" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li> <img src="{{ assets('images/nexts.png') }}" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li> <img src="{{ assets('images/nexts.png') }}" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li> <img src="{{ assets('images/nexts.png') }}" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li> <img src="{{ assets('images/nexts.png') }}" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li> <img src="{{ assets('images/nexts.png') }}" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li> <img src="{{ assets('images/nexts.png') }}" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li> <img src="{{ assets('images/nexts.png') }}" alt=""> Lorem ipsum dolor sit amet consectetur adipisicing.</li>
             </ul>
         </div>
         <div class="col-md-7">
